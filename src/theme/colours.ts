@@ -1,5 +1,5 @@
 export const colours = {
-  backgound: "#dddef4",
+  background: "rgb(222, 223, 246)",
   text: "#FFFFFF",
   textMuted: "#46465c",
   primary: "#1f257a",

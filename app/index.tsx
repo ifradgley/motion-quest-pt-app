@@ -1,5 +1,5 @@
 import { Text, View } from "react-native";
-import { colours } from "../src/theme/colours";
+import { colours, spacing, typography } from "@/theme";
 
 export default function HomeScreen() {
   return (
@@ -9,9 +9,12 @@ export default function HomeScreen() {
         alignItems: "center",
         justifyContent: "center",
         backgroundColor: colours.background,
+        padding: spacing.lg,
       }}
     >
-      <Text style={{ color: colours.primary, fontSize: 24 }}>
+      <Text
+        style={[typography.title, { color: colours.primary, fontSize: 24 }]}
+      >
         Motion Quest is alive!
       </Text>
     </View>
