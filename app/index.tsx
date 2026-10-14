@@ -1,22 +1,24 @@
-import { Text, View } from "react-native";
-import { colours, spacing, typography } from "@/theme";
+import { AppText } from "@/components/ui/AppText";
+import { Screen } from "@/components/ui/Screen";
+import { Card } from "@/components/ui/Card";
+import { Button } from "@/components/ui/Button";
+import { ArtworkPlaceholder } from "@/components/ArtworkPlaceholder";
 
 export default function HomeScreen() {
   return (
-    <View
-      style={{
-        flex: 1,
-        alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: colours.background,
-        padding: spacing.lg,
-      }}
-    >
-      <Text
-        style={[typography.title, { color: colours.primary, fontSize: 24 }]}
-      >
-        Motion Quest is alive!
-      </Text>
-    </View>
+    <Screen>
+      <AppText variant="title">Motion Quest is alive!</AppText>
+      <ArtworkPlaceholder source={null} label="Quest map illustration" />
+      <Card>
+        <AppText variant="heading">First Card</AppText>
+        <AppText muted>This is muted text.</AppText>
+      </Card>
+      <Button label="Begin quest" onPress={() => console.log("Quest begun!")} />
+      <Button
+        label="Not today"
+        variant="secondary"
+        onPress={() => console.log("Maybe later")}
+      />
+    </Screen>
   );
 }
